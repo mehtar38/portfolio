@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+/* ── Theme tokens — change --accent to retheme the site ── */
+:root {
+  --background: #f8f7f4;
+  --foreground: #1a1917;
+  --muted: #7a7872;
+  --accent: #3d5a45;
+  --border: #e4e2dc;
+  --radius: 18px;
+  --shadow: 0 2px 16px rgba(26, 25, 23, 0.04);
+  --shadow-hover: 0 12px 32px rgba(26, 25, 23, 0.09);
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --radius-card: var(--radius);
+
+  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle paper texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Hide scrollbar in sidebar while keeping scroll in content */
+.content-scroll {
+  overflow-y: auto;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.content-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content-scroll::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 99px;
+}
+
+/* ── Blog construction tape (CSS only) ── */
+.construction-tape {
+  position: absolute;
+  left: 50%;
+  width: 140%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    -45deg,
+    #d4a017,
+    #d4a017 12px,
+    #1a1917 12px,
+    #1a1917 24px
+  );
+  z-index: 10;
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(26, 25, 23, 0.15);
+}
+
+.construction-tape span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: #1a1917;
+  background: #d4a017;
+  padding: 2px 12px;
+}
+
+.construction-tape--top {
+  top: 24px;
+  transform: translateX(-50%) rotate(-3deg);
+}
+
+.construction-tape--bottom {
+  bottom: 24px;
+  transform: translateX(-50%) rotate(2deg);
+}
