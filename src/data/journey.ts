@@ -4,6 +4,7 @@ import uci from "../assets/uci.png";
 import bnp from "../assets/bnp.png";
 import ieee from"../assets/ieee.webp";
 import brss from "../assets/brss.jpg";
+import unnati from "../assets/unnati.png";
 
 export interface JourneyArtifact {
   label: string;
@@ -33,7 +34,7 @@ export const journeyMilestones: JourneyMilestone[] = [
     logo: nmims,
     description:
       "CGPA: 3.87/4.00",
-    align: "left",
+    align: "right",
       artifacts: [
     {
       label: "Marksheet",
@@ -50,7 +51,7 @@ export const journeyMilestones: JourneyMilestone[] = [
     logo: uci, 
     description:
       "CGPA: 4.00/4.00",
-    align: "left",
+    align: "right",
     artifacts: [
     {
       label: "Transcripts",
@@ -60,14 +61,14 @@ export const journeyMilestones: JourneyMilestone[] = [
   },
   {
     id: "internship-2024",
-    year: "2025",
+    year: "Jun 2025 - Sep 2025",
     category: "Internship",
     title: "Software Engineering Intern",
     subtitle: "BreatheIt, Inc.",
     logo: breatheit,
     description:
       "Contributed to production features in a collaborative engineering team, gaining experience with code review, agile workflows, and full-stack development.",
-    align: "right",
+    align: "left",
     artifacts: [
     {
       label: "iOS",
@@ -77,29 +78,46 @@ export const journeyMilestones: JourneyMilestone[] = [
   },
     {
     id: "internship-2024",
-    year: "2025",
+    year: "Jun 2025 - Sep 2025",
     category: "Internship",
     title: "Applied Machine Learning Intern",
     subtitle: "Boundary Remote Subsurface Solutions ",
     logo: brss,
     description:
       "Contributed to production features in a collaborative engineering team, gaining experience with code review, agile workflows, and full-stack development.",
-    align: "right",
+    align: "left",
 },
     {
     id: "internship",
-    year: "2024",
+    year: "Jan 2024 - Jul 2024",
     category: "Internship",
     title: "Full-Stack Development Intern",
     subtitle: "BNP Paribas",
     logo: bnp,
     description:
       "Completed intensive self-directed learning in modern web technologies — React, TypeScript, and cloud deployment — applied through personal and academic projects.",
-    align: "right",
+    align: "left",
     artifacts: [
     {
       label: "Certificate",
       href: "https://drive.google.com/file/d/1Z7FGOmvlHAQGlF8oXWXP8G2Y2Rge7XHf/view?usp=sharing",
+    },
+  ],
+  },
+   {
+    id: "internship",
+    year: "Jun 2023 - Aug 2023",
+    category: "Internship",
+    title: "Mobile Application Development Intern",
+    subtitle: "Unnati Pharmaceuticals Pvt. Ltd.",
+    logo: unnati,
+    description:
+      "Completed intensive self-directed learning in modern web technologies — React, TypeScript, and cloud deployment — applied through personal and academic projects.",
+    align: "left",
+    artifacts: [
+    {
+      label: "Website",
+      href: "https://www.unnatipharmaceuticals.com/",
     },
   ],
   },
@@ -111,7 +129,7 @@ export const journeyMilestones: JourneyMilestone[] = [
     subtitle: "Text Summarization for Research Papers",
     logo: ieee,
     description: "Published in the 2024 IEEE 9th International Conference for Convergence in Technology (I2CT)",
-    align: "left",
+    align: "right",
     artifacts: [
     {
       label: "Publication",

@@ -1,42 +1,5 @@
 import BackButton from "../components/BackButton";
-// import InterestCard from "../components/InterestCard";
 import PageContainer from "../components/PageContainer";
-// import SectionHeading from "../components/SectionHeading";
-// import { interestBlocks } from "../data/interests";
-
-// interface InterestsViewProps {
-//   onBack: () => void;
-// }
-
-// /** Conversational editorial interests — modular blocks, not a hobby list */
-// export default function InterestsView({ onBack }: InterestsViewProps) {
-//   return (
-//     <PageContainer className="!max-w-6xl">
-//       <BackButton onBack={onBack} />
-
-//       <SectionHeading subtitle="Introducing some personality here">
-//         Interests
-//       </SectionHeading>
-
-//       <div
-//         className="
-//           grid 
-//           grid-cols-12 
-//           gap-4
-//           auto-rows-[120px]
-//         "
-//       >
-//         {interestBlocks.map((block, index) => (
-//           <InterestCard
-//             key={block.id}
-//             block={block}
-//             index={index}
-//           />
-//         ))}
-//       </div>
-//     </PageContainer>
-//   );
-// }
 
 import { motion } from "framer-motion";
 import {
@@ -44,15 +7,26 @@ import {
   PiFilmSlate,
   PiGlobe,
   PiGuitar,
-  PiMoon,
   PiPencilSimple,
   PiPlanet,
   PiTranslate,
 } from "react-icons/pi";
+import mumbai from "../assets/mumbai.jpg";
+import cali from "../assets/cali.jpg";
+import nj from "../assets/nj.jpg";
+import ny from "../assets/ny.jpg";
+import spotfiy from "../assets/spotify.jpg";
 
 interface InterestsViewProps {
   onBack: () => void;
 }
+
+const places: Record<string, string> = {
+  Mumbai: mumbai,
+  California: cali,
+  "New Jersey": nj,
+  "New York": ny,
+};
 
 export default function InterestsView({ onBack }: InterestsViewProps) {
   return (
@@ -70,21 +44,18 @@ export default function InterestsView({ onBack }: InterestsViewProps) {
           <span
             key={i}
             className="absolute h-1 w-1 rounded-full bg-white"
-            style={{
-              // left: `${Math.random() * 100}%`,
-              // top: `${Math.random() * 100}%`,
-            }}
+            style={
+              {
+                // left: `${Math.random() * 100}%`,
+                // top: `${Math.random() * 100}%`,
+              }
+            }
           />
         ))}
       </div>
 
-      <PageContainer className="relative z-10 !max-w-6xl py-10">
+      <PageContainer className="relative z-10 max-w-6xl! py-10">
         <BackButton onBack={onBack} />
-
-        <div className="mb-10 flex items-center gap-2 text-sm text-zinc-400">
-          <PiMoon className="text-fuchsia-400" size={18} />
-          <span>I still think dark themes look better.</span>
-        </div>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -96,11 +67,10 @@ export default function InterestsView({ onBack }: InterestsViewProps) {
         </motion.h1>
 
         <p className="mt-4 max-w-2xl text-zinc-400">
-          The part of the portfolio that explains why I enjoy learning in the
-          first place.
+          Introducing some personality here!
         </p>
 
-        <div className="mt-10 grid grid-cols-12 gap-4 auto-rows-[120px]">
+        <div className="mt-10 grid grid-cols-12 gap-4 auto-rows-30">
           {/* Quote */}
           <motion.section
             initial={{ opacity: 0, y: 24 }}
@@ -108,7 +78,7 @@ export default function InterestsView({ onBack }: InterestsViewProps) {
             viewport={{ once: true }}
             className="col-span-12 row-span-3 rounded-3xl border border-zinc-800 bg-zinc-900/60 p-8 md:p-12 backdrop-blur"
           >
-            <div className="h-[2px] w-16 bg-fuchsia-400" />
+            <div className="h-0.5 w-16 bg-fuchsia-400" />
             <blockquote className="mt-8 font-serif text-3xl md:text-5xl leading-tight text-zinc-100">
               “Nothing is boring, you just haven’t spent enough time with it.”
             </blockquote>
@@ -122,7 +92,7 @@ export default function InterestsView({ onBack }: InterestsViewProps) {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="relative col-span-12 md:col-span-7 row-span-4 overflow-hidden rounded-3xl border border-cyan-500/20 bg-gradient-to-br from-cyan-500/10 via-zinc-900 to-zinc-900 p-8"
+            className="relative col-span-12 md:col-span-7 row-span-4 overflow-hidden rounded-3xl border border-cyan-500/20 bg-linear-to-br from-cyan-500/10 via-zinc-900 to-zinc-900 p-8"
           >
             <PiPlanet
               className="absolute right-6 top-6 text-cyan-300/20"
@@ -132,19 +102,15 @@ export default function InterestsView({ onBack }: InterestsViewProps) {
               Science canon event
             </p>
             <h2 className="mt-4 font-serif text-3xl md:text-4xl leading-tight">
-              The article that changed how I see the universe
+              The article that changed my life
             </h2>
             <p className="mt-6 max-w-xl leading-relaxed text-zinc-300">
-              A chapter from Discovery’s <em>Universe</em> book series
-              followed a single photon leaving a star and travelling for
-              billions of years before finally reaching a young girl’s eye.
-              Along the way it silently witnessed exploding stars, drifting
-              galaxies, and the end of dinosaurs. I was never quite the same
-              after reading it.
+              A chapter from Discovery’s <em>Universe</em> book series followed
+              a single photon leaving a star and travelling for billions of
+              years before finally reaching a young girl’s eye. Along the way it
+              silently witnessed exploding stars, drifting galaxies, our planets
+              and the end of dinosaurs. Haven't been the same since.
             </p>
-            <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-cyan-400/30 px-4 py-2 text-sm text-cyan-200">
-              Add article link later
-            </div>
           </motion.section>
 
           {/* Duolingo stat */}
@@ -152,18 +118,17 @@ export default function InterestsView({ onBack }: InterestsViewProps) {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="col-span-12 md:col-span-5 row-span-2 rounded-3xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-zinc-900 p-8 flex flex-col justify-between"
+            className="col-span-12 md:col-span-5 row-span-2 rounded-3xl border border-emerald-500/20 bg-linear-to-br from-emerald-500/10 to-zinc-900 p-8 flex flex-col justify-between"
           >
             <PiTranslate className="text-emerald-300" size={34} />
             <div>
               <p className="text-6xl font-serif text-emerald-200">720+</p>
               <h3 className="mt-2 text-xl font-medium">Spanish streak</h3>
               <p className="mt-2 text-zinc-300">
-                Still showing up every day. The owl remains undefeated.
+                730+ day streak that's opened my world a little more!x
               </p>
             </div>
           </motion.section>
-
           {/* Places */}
           <motion.section
             initial={{ opacity: 0, y: 24 }}
@@ -175,20 +140,28 @@ export default function InterestsView({ onBack }: InterestsViewProps) {
               <PiGlobe size={22} />
               <h3 className="text-lg font-medium">Places I’ve called home</h3>
             </div>
-            <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
-              {[
-                "Mumbai",
-                "California",
-                "New Jersey",
-                "New York",
-              ].map((place) => (
-                <div
-                  key={place}
-                  className="rounded-2xl border border-zinc-800 bg-zinc-900 px-4 py-6 text-center"
-                >
-                  <p className="text-sm text-zinc-400">{place}</p>
-                </div>
-              ))}
+
+            <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
+              {["Mumbai", "California", "New Jersey", "New York"].map(
+                (place) => (
+                  <div
+                    key={place}
+                    className="group relative rounded-2xl border border-zinc-800 bg-zinc-900 px-4 py-12 text-center overflow-hidden"
+                  >
+                    {/* Text */}
+                    <p className="text-sm text-zinc-400 transition-opacity duration-300 group-hover:opacity-0">
+                      {place}
+                    </p>
+
+                    {/* Hover Image */}
+                    <img
+                      src={places[place]}
+                      alt={place}
+                      className="absolute inset-0 w-full h-full object-fill opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    />
+                  </div>
+                ),
+              )}
             </div>
           </motion.section>
 
@@ -197,7 +170,7 @@ export default function InterestsView({ onBack }: InterestsViewProps) {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="col-span-12 md:col-span-4 row-span-2 rounded-3xl border border-violet-500/20 bg-gradient-to-br from-violet-500/10 to-zinc-900 p-8 flex flex-col justify-between"
+            className="col-span-12 md:col-span-4 row-span-2 rounded-3xl border border-violet-500/20 bg-linear-to-br from-violet-500/10 to-zinc-900 p-8 flex flex-col justify-between"
           >
             <PiGuitar className="text-violet-300" size={36} />
             <div>
@@ -214,7 +187,7 @@ export default function InterestsView({ onBack }: InterestsViewProps) {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="col-span-12 md:col-span-4 row-span-2 rounded-3xl border border-amber-500/20 bg-gradient-to-br from-amber-500/10 to-zinc-900 p-8 flex flex-col justify-between"
+            className="col-span-12 md:col-span-4 row-span-2 rounded-3xl border border-amber-500/20 bg-linear-to-br from-amber-500/10 to-zinc-900 p-8 flex flex-col justify-between"
           >
             <PiFilmSlate className="text-amber-300" size={36} />
             <div>
@@ -226,19 +199,19 @@ export default function InterestsView({ onBack }: InterestsViewProps) {
             </div>
           </motion.section>
 
-          {/* Spotify image placeholder */}
           <motion.section
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="col-span-12 md:col-span-4 row-span-2 overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/60 p-6 flex flex-col justify-between"
           >
-            <div className="flex-1 rounded-2xl border border-dashed border-zinc-700 bg-zinc-950/60 flex items-center justify-center text-center text-sm text-zinc-500">
-              Add your Spotify screenshot here
+            <div className="flex-1 rounded-2xl border border-zinc-700 bg-zinc-950/60 overflow-hidden">
+              <img
+                src={spotfiy}
+                alt="Spotify screenshot"
+                className="w-full h-full object-cover"
+              />
             </div>
-            <p className="mt-4 text-sm text-zinc-400">
-              Usually <em>Iris</em> is somewhere in the rotation.
-            </p>
           </motion.section>
 
           {/* Philosophy + writing */}

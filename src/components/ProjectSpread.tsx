@@ -13,7 +13,6 @@ const visualLabels: Record<Project["visualType"], string> = {
   screenshot: "Screenshot Placeholder",
 };
 
-/** Large case-study spread — magazine-style project module */
 export default function ProjectSpread({ project, index }: ProjectSpreadProps) {
   const reverse = index % 2 === 1;
 
@@ -38,7 +37,14 @@ export default function ProjectSpread({ project, index }: ProjectSpreadProps) {
             style={{ borderRadius: "var(--radius)", boxShadow: "var(--shadow)" }}
           >
             {/* Visual placeholder */}
-            <div className="relative aspect-[16/10] bg-border/40 flex items-center justify-center">
+             {project.visualType === "image" && project.image ? (
+    <img
+      src={project.image}
+      alt={project.title}
+      className="w-full h-full object-cover"
+    />
+  ) : (
+            <div className="relative aspect-16/10 bg-border/40 flex items-center justify-center">
               <div className="text-center px-6">
                 <span className="text-xs uppercase tracking-[0.25em] text-muted">
                   {visualLabels[project.visualType]}
@@ -51,6 +57,7 @@ export default function ProjectSpread({ project, index }: ProjectSpreadProps) {
               <span className="absolute top-4 left-4 w-6 h-6 border-t border-l border-muted/30" />
               <span className="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-muted/30" />
             </div>
+  )}
 
             {/* Content below visual */}
             <div className="p-6 md:p-8 lg:p-10 bg-background">
@@ -117,18 +124,22 @@ export default function ProjectSpread({ project, index }: ProjectSpreadProps) {
             </p>
             <dl className="space-y-5">
               <div>
-                <dt className="text-xs text-muted uppercase tracking-wide">Role</dt>
-                <dd className="mt-1 text-foreground">{project.meta.role}</dd>
+                {/* <dt className="text-xs text-muted uppercase tracking-wide">Role</dt> */}
+                {/* <dd className="mt-1 text-foreground">{project.meta.role}</dd> */}
               </div>
               <div>
                 <dt className="text-xs text-muted uppercase tracking-wide">Timeline</dt>
                 <dd className="mt-1 text-foreground">{project.meta.timeline}</dd>
               </div>
               <div>
-                <dt className="text-xs text-muted uppercase tracking-wide">Tech Stack</dt>
-                <dd className="mt-1 text-muted text-sm leading-relaxed">
-                  {project.meta.stack}
-                </dd>
+                <dt className="text-xs text-muted uppercase tracking-wide">Implemenntation Details</dt>
+<dd className="mt-1 text-muted text-sm leading-relaxed">
+  <ul className="list-disc pl-5 space-y-1">
+    {project.meta.stack.map((item, idx) => (
+      <li key={idx}>{item}</li>
+    ))}
+  </ul>
+</dd>
               </div>
             </dl>
           </div>
