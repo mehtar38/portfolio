@@ -26,7 +26,6 @@ const titleStyles: Record<ModuleSize, string> = {
   small: "text-xl lg:text-2xl",
 };
 
-/** Dashboard card — fills grid cell, subtle hover lift */
 export default function ModuleCard({
   title,
   description,
@@ -55,9 +54,9 @@ export default function ModuleCard({
       className={`
         group relative flex flex-col justify-between text-left
         h-full min-h-0
-        bg-background border border-border
+        border border-border
         cursor-pointer overflow-hidden
-        transition-[box-shadow] duration-300 ease-out
+        transition-shadow duration-300 ease-out
         ${sizeStyles[size]} ${className}
       `}
       style={{
@@ -67,7 +66,7 @@ export default function ModuleCard({
     >
       <div className="relative z-10 flex flex-col justify-between h-full gap-3 lg:gap-4">
         <span
-          className="inline-block w-6 h-[2px] bg-accent shrink-0 transition-all duration-300 ease-out group-hover:w-10"
+          className="inline-block w-6 h-0.5 bg-accent shrink-0 transition-all duration-300 ease-out group-hover:w-10"
           aria-hidden
         />
         <div className="flex-1 min-h-0 flex flex-col justify-center">

@@ -7,15 +7,10 @@ interface HomeViewProps {
   onNavigate: (page: Exclude<PageType, "home">) => void;
 }
 
-/**
- * Dashboard home — tight editorial puzzle grid.
- * Desktop: fills one viewport, no scroll. Mobile: stacks naturally.
- */
 export default function HomeView({ onNavigate }: HomeViewProps) {
   return (
     <div className="w-full h-full lg:h-screen lg:max-h-screen lg:overflow-hidden">
       <div className="h-full px-5 py-6 md:px-8 md:py-8 lg:px-10 lg:py-8">
-        {/* Fixed 3-row grid on desktop — every cell occupied */}
         <div
           className="
             grid grid-cols-12 gap-2.5 md:gap-3

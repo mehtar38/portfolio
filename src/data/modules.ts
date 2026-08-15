@@ -1,9 +1,5 @@
 import type { ModuleConfig } from "../types";
 
-/**
- * Home dashboard modules — explicit grid placement for a tight puzzle layout.
- * Desktop: 12-col × 3-row grid, every cell filled, no masonry gaps.
- */
 export const modules: ModuleConfig[] = [
   {
     id: "blog",

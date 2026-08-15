@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 
-/** Welcome / intro cell — matches ModuleCard styling, not clickable */
 export default function IntroCard() {
   return (
     <motion.div
@@ -9,7 +8,7 @@ export default function IntroCard() {
       transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
       className="
         col-span-12 lg:col-span-8 lg:col-start-1 lg:row-start-1
-        min-h-[160px] lg:min-h-0 h-full
+        min-h-40 lg:min-h-0 h-full
         flex flex-col justify-between
         bg-gray-100 border border-border
         p-5 md:p-6 lg:p-7
@@ -20,7 +19,7 @@ export default function IntroCard() {
       }}
     >
       <span
-        className="inline-block w-8 h-[2px]"
+        className="inline-block w-8 h-0.5"
         aria-hidden
       />
       <div>
