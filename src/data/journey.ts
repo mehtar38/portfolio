@@ -67,7 +67,7 @@ export const journeyMilestones: JourneyMilestone[] = [
     subtitle: "BreatheIt, Inc.",
     logo: breatheit,
     description:
-      "Contributed to production features in a collaborative engineering team, gaining experience with code review, agile workflows, and full-stack development.",
+      "Built full-stack onboarding features using React, Node.js, Express, PostgreSQL, and GCP storage for a company onboarding workflow. Also worked on the production Ultopia mobile app using React Native and TypeScript, mainly around navigation and UI features.",
     align: "left",
     artifacts: [
     {
@@ -84,7 +84,7 @@ export const journeyMilestones: JourneyMilestone[] = [
     subtitle: "Boundary Remote Subsurface Solutions ",
     logo: brss,
     description:
-      "Contributed to production features in a collaborative engineering team, gaining experience with code review, agile workflows, and full-stack development.",
+      "Worked with large hyperspectral satellite imagery datasets from NASA Hyperion to build Python preprocessing and analysis pipelines. Implemented spectral analysis and material identification algorithms to support research into subsurface composition and depth.",
     align: "left",
 },
     {
@@ -95,7 +95,7 @@ export const journeyMilestones: JourneyMilestone[] = [
     subtitle: "BNP Paribas",
     logo: bnp,
     description:
-      "Completed intensive self-directed learning in modern web technologies — React, TypeScript, and cloud deployment — applied through personal and academic projects.",
+      "Worked on automating the IT Project Lifecycle using Camunda, Spring Boot, Angular, and REST APIs. Built backend services and frontend dashboards while working closely with stakeholders to generate prototype.",
     align: "left",
     artifacts: [
     {
@@ -112,7 +112,7 @@ export const journeyMilestones: JourneyMilestone[] = [
     subtitle: "Unnati Pharmaceuticals Pvt. Ltd.",
     logo: unnati,
     description:
-      "Completed intensive self-directed learning in modern web technologies — React, TypeScript, and cloud deployment — applied through personal and academic projects.",
+      "Worked on a React Native mobile app connected to the company’s internal software, using Firebase for real-time business analytics and loss alerts.",
     align: "left",
     artifacts: [
     {

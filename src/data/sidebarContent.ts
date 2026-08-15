@@ -7,7 +7,7 @@ export const sidebarContent: Record<
 > = {
   home: {
     heading: "",
-    text: "Treat this and an unoptimized version of my CV and LinkedIn :)",
+    text: "Treat this as an unoptimized version of my CV and LinkedIn :)",
   },
   journey: {
     heading: "Journey",

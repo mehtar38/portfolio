@@ -83,6 +83,7 @@ export default function ProjectSpread({ project, index }: ProjectSpreadProps) {
 
               {/* Action buttons */}
               <div className="mt-8 flex flex-wrap gap-3">
+                {project.githubUrl && (
                 <a
                   href={project.githubUrl}
                   target="_blank"
@@ -93,6 +94,8 @@ export default function ProjectSpread({ project, index }: ProjectSpreadProps) {
                   <FaGithub size={14} />
                   View GitHub
                 </a>
+                )}
+                  {project.demoUrl && (
                 <a
                   href={project.demoUrl}
                   target="_blank"
@@ -103,6 +106,7 @@ export default function ProjectSpread({ project, index }: ProjectSpreadProps) {
                   <FaExternalLinkAlt size={12} />
                   View Demo
                 </a>
+                  )}
               </div>
             </div>
           </div>

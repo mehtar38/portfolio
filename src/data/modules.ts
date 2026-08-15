@@ -32,7 +32,7 @@ export const modules: ModuleConfig[] = [
   {
     id: "volunteer",
     title: "Volunteer",
-    description: "Community work and giving back.",
+    description: "And leadership and fun",
     size: "wide",
     gridClass:
       "col-span-12 lg:col-span-8 lg:col-start-1 lg:row-start-3 min-h-[140px] lg:min-h-0",
