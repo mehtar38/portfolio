@@ -52,6 +52,14 @@ export default function Sidebar({ activePage, onNavigateHome }: SidebarProps) {
           </button>
 
           <nav className="flex items-center gap-4">
+            <button
+  type="button"
+  onClick={handleGameModeToggle}
+  aria-pressed={gameMode}
+  className="font-serif text-xl text-foreground"
+>
+  Game Mode
+</button>
             {links.map(({ label, href, icon: Icon }) => (
               <a
                 key={label}
