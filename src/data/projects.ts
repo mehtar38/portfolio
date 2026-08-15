@@ -44,7 +44,7 @@ export const projects: Project[] = [
     id: "project-beta",
     title: "Scout",
     description:
-      "I use this one sometimes! It is a CLI tool that allows you to navigate through your file system in natural langauge. Since it is written in Go, there is search concurrency and real convenient OS coordination for opening/reading files. There is also a TUI for easier navigation. Another one of those times I appreciate Gemini API's free tier!",
+      "I use this one sometimes! It is a CLI tool that allows you to navigate through your file system in natural language. Since it is written in Go, there is search concurrency and real convenient OS coordination for opening/reading files. There is also a TUI for easier navigation. Another one of those times I appreciate Gemini API's free tier!",
     tags: ["Go", "Gemini API", "Claude", "Charm", "Lipgloss", "Cobra"],
     githubUrl: "https://github.com/mehtar38/scout",
     demoUrl: "https://drive.google.com/file/d/1iyFSVz7E-MchnH4vi3a_ZneUkAfEWjMg/view?usp=sharing",
@@ -107,7 +107,7 @@ export const projects: Project[] = [
       timeline: "Jul 2023 - Jan 2024",
       stack: ["Learned the internal architecture of LLMs before using them, which made later projects make way more sense.",
         "We implemented T5, BERT, LSA, Term frequency, Seq2Seq endoder decoder (with and without attention) + transformers",
-        "'All you need is attention' is so grounbreaking, technicall changed my perspective on the 'if LLMs are intelligent' debate.",
+        "'All you need is attention' is so groundbreaking, technicall changed my perspective on the 'if LLMs are intelligent' debate.",
         "We presented this at a conference!!"],
     },
   },
