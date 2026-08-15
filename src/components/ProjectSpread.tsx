@@ -136,7 +136,7 @@ export default function ProjectSpread({ project, index }: ProjectSpreadProps) {
                 <dd className="mt-1 text-foreground">{project.meta.timeline}</dd>
               </div>
               <div>
-                <dt className="text-xs text-muted uppercase tracking-wide">Implemenntation Details</dt>
+                <dt className="text-xs text-muted uppercase tracking-wide">Implementation Details</dt>
 <dd className="mt-1 text-muted text-sm leading-relaxed">
   <ul className="list-disc pl-5 space-y-1">
     {project.meta.stack.map((item, idx) => (
