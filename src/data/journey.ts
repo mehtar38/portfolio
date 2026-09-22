@@ -25,23 +25,6 @@ export interface JourneyMilestone {
 }
 
 export const journeyMilestones: JourneyMilestone[] = [
-  {
-    id: "education-2020",
-    year: "2020 - 2024",
-    category: "Undergraduate",
-    title: "Bachelors of Technology in Computer Engineering",
-    subtitle: "Mukesh Patel School of Technology Management & Engineering, NMIMS University",
-    logo: nmims,
-    description:
-      "CGPA: 3.87/4.00",
-    align: "right",
-      artifacts: [
-    {
-      label: "Marksheet",
-      href: "https://drive.google.com/file/d/1tPSmedH5jFt2Ojbeq-qCvY6Nh7RFGy1_/view?usp=sharing",
-    },
-  ],
-  },
     {
     id: "graduate-2025",
     year: "2024 - 2025",
@@ -56,6 +39,23 @@ export const journeyMilestones: JourneyMilestone[] = [
     {
       label: "Transcripts",
       href: "https://drive.google.com/file/d/1XCHHDvpVQQN4FNif2WgO0NAS0jgRXPB3/view?usp=sharing",
+    },
+  ],
+  },
+    {
+    id: "education-2020",
+    year: "2020 - 2024",
+    category: "Undergraduate",
+    title: "Bachelors of Technology in Computer Engineering",
+    subtitle: "Mukesh Patel School of Technology Management & Engineering, NMIMS University",
+    logo: nmims,
+    description:
+      "CGPA: 3.87/4.00",
+    align: "right",
+      artifacts: [
+    {
+      label: "Marksheet",
+      href: "https://drive.google.com/file/d/1tPSmedH5jFt2Ojbeq-qCvY6Nh7RFGy1_/view?usp=sharing",
     },
   ],
   },
