@@ -1,0 +1,118 @@
+{
+  "model": "qwen3:8b",
+  "steps": [
+    "planning",
+    "angle: Despite AI's promise to automate and enhance productivity, its over-reliance on automation has led to new inefficiencies, errors, and the re-emergence of human oversight as a critical, irreplaceable layer in complex workflows.",
+    "decided the research has gaps, searching: ['What are the long-term cost-benefit analyses of human-AI collaboration in enterprise settings?', 'How do different industries approach the balance between AI automation and human oversight?', 'What are the psychological and behavioral factors that influence human engagement with AI systems?']",
+    "added 4 source(s)",
+    "flowchart: yes, showing The process of AI integration, from initial automation, to error correction, to the reintegration of human oversight, and the eventual realization that human-AI collaboration is more effective than either alone.",
+    "drafting",
+    "critique round 1",
+    "editor left 5 note(s), revising",
+    "critique round 2",
+    "editor left 6 note(s), revising",
+    "fact-check with Gemini (once)",
+    "Gemini flagged 3 issue(s), fixing once locally",
+    "used 10 of 14 sources: S6, S7, S8, S1, S3, S4, S9, S5, S10, S11"
+  ],
+  "plan": {
+    "title": "The Paradox of Productivity: Why AI's 'Human Layer' is Coming Back",
+    "description": "AI was supposed to boost productivity—now we're rethinking the role of humans in the workflow.",
+    "tone": "exploratory",
+    "angle": "Despite AI's promise to automate and enhance productivity, its over-reliance on automation has led to new inefficiencies, errors, and the re-emergence of human oversight as a critical, irreplaceable layer in complex workflows.",
+    "outline": [
+      {
+        "heading": "The Productivity Mirage: AI's Hidden Costs",
+        "points": [
+          "AI was expected to save time and increase efficiency, but many projects show that 40% of the time saved is spent fixing errors (S6).",
+          "AI-generated outputs often lack quality and tone, requiring human intervention to maintain standards (S5).",
+          "Complex tasks, especially in software development, frequently result in code-quality regressions and rework (S7).",
+          "The initial productivity gains from AI are often offset by the need for human correction and oversight."
+        ],
+        "sources": [
+          "S6",
+          "S5",
+          "S7"
+        ]
+      },
+      {
+        "heading": "The Fallacy of Full Automation: Lessons from Failures",
+        "points": [
+          "Companies like Klarna and McDonald's found that full AI automation led to customer dissatisfaction and operational errors (S8).",
+          "Enterprise AI rollouts often fail due to poor change management, insufficient training, and over-reliance on automation (S1).",
+          "The assumption that AI can replace humans in all aspects of workflows has led to regrettable outcomes, including layoffs that were later reversed (S1).",
+          "Human oversight is not just a backup—it's a critical component of successful AI integration."
+        ],
+        "sources": [
+          "S8",
+          "S1"
+        ]
+      },
+      {
+        "heading": "Why Human Oversight Isn't Working: The Automation Bias Problem",
+        "points": [
+          "Human reviewers in AI compliance systems often become passive and disengaged, suffering from 'automation bias' (S3).",
+          "The 'vigilance decrement' means that humans monitoring reliable AI systems become less attentive over time (S4).",
+          "This passive monitoring leads to a failure to detect critical errors, especially in high-stakes environments like autonomous vehicles (S4).",
+          "The design of AI systems is often flawed when it assumes human oversight is straightforward and effective."
+        ],
+        "sources": [
+          "S3",
+          "S4"
+        ]
+      },
+      {
+        "heading": "Revisiting Human-Centered Automation: The Real Goal",
+        "points": [
+          "Automation has always aimed to augment human capabilities, not replace them (S9).",
+          "Human intuition, adaptability, and judgment are essential in complex, uncertain scenarios (S10).",
+          "The 'human-in-the-loop' model, where humans edit and refine AI outputs, yields the best results in quality and tone (S5).",
+          "The future of AI is not in full automation, but in collaboration—where humans guide and refine AI's work."
+        ],
+        "sources": [
+          "S9",
+          "S10",
+          "S5"
+        ]
+      }
+    ],
+    "flowchart": {
+      "include": true,
+      "shows": "The process of AI integration, from initial automation, to error correction, to the reintegration of human oversight, and the eventual realization that human-AI collaboration is more effective than either alone."
+    },
+    "gaps": [
+      "What are the long-term cost-benefit analyses of human-AI collaboration in enterprise settings?",
+      "How do different industries approach the balance between AI automation and human oversight?",
+      "What are the psychological and behavioral factors that influence human engagement with AI systems?"
+    ]
+  },
+  "fact_check": [
+    {
+      "claim": "For example, a major financial services firm experienced a decline in customer satisfaction after implementing full AI automation in its credit approval process, leading to a series of misclassified loan applications.",
+      "problem": "The specific details of a 'major financial services firm' with a 'credit approval process' leading to 'misclassified loan applications' are not explicitly stated or detailed in source [S8]. While S8 mentions Klarna (a financial technology company) experienced 'increased customer dissatisfaction and operational errors' due to full AI automation, it does not elaborate on these specific scenarios.",
+      "fix": "Rephrase the example to accurately reflect what [S8] states, e.g., 'For example, a financial technology company experienced increased customer dissatisfaction and operational errors after pursuing full AI automation.' Alternatively, remove the specific but unsubstantiated details if they cannot be verified."
+    },
+    {
+      "claim": "A clear transition from the discussion of automation bias to the Uber collision is essential.",
+      "problem": "This sentence is a self-referential comment about the blog post's own structure and flow. It is an editorial instruction or observation, not a factual claim to be supported by a source, and therefore does not belong in the body of the blog post itself.",
+      "fix": "Remove this sentence entirely. It is meta-commentary that should not be present in the published content."
+    },
+    {
+      "claim": "For example, some organizations have introduced periodic refresher training and active engagement protocols to combat automation bias and maintain human vigilance [S4].",
+      "problem": "Source [S4] discusses the 'vigilance decrement' and uses the Uber collision as an illustration, arguing that passive monitoring leads to disengagement. However, it does not mention or provide examples of organizations implementing 'periodic refresher training and active engagement protocols' as a solution.",
+      "fix": "Remove this sentence, as the proposed solutions and examples are not supported by the cited source. If solutions are to be discussed, they must be properly sourced."
+    }
+  ],
+  "used_sources": [
+    "S6",
+    "S7",
+    "S8",
+    "S1",
+    "S3",
+    "S4",
+    "S9",
+    "S5",
+    "S10",
+    "S11"
+  ]
+}

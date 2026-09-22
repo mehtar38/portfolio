@@ -11,7 +11,9 @@ import BlogView from "./views/BlogView";
 import type { PageType } from "./types";
 
 function App() {
-  const [activePage, setActivePage] = useState<PageType>("home");
+  const [activePage, setActivePage] = useState<PageType>(() =>
+    window.location.hash.startsWith("#/blog") ? "blog" : "home"
+  );
   const [direction, setDirection] = useState(1);
 
   const navigateTo = useCallback((page: Exclude<PageType, "home">) => {
@@ -22,6 +24,9 @@ function App() {
   const goHome = useCallback(() => {
     setDirection(-1);
     setActivePage("home");
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
   }, []);
 
   const renderPage = () => {

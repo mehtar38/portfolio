@@ -27,6 +27,6 @@ export const sidebarContent: Record<
   },
   blog: {
     heading: "Blog",
-    text: "Writing is in progress. Check back soon for essays on engineering, design, and learning.",
+    text: "Every topic here is written twice: once by me, once by an AI agent, independently. A running experiment in how the two compare.",
   },
 };

@@ -1,0 +1,17 @@
+{
+  "suggested": [
+    "When you delete a file, where does it actually go?",
+    "Software bugs aren't 'mistakes'; they're just programs doing exactly what they were told.",
+    "Could a computer ever truly 'forget' something like a human does?",
+    "There's no such thing as truly 'random' in a computer.",
+    "What happens *before* your operating system boots up?",
+    "How do digital cameras \"see\" color when they only detect light intensity?"
+  ],
+  "current": null,
+  "published": [
+    {
+      "title": "The redundancy of artificial productivity: how after introducing ai layers in some workflows, we now want the human layer back",
+      "slug": "the-redundancy-of-artificial-productivity"
+    }
+  ]
+}

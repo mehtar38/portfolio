@@ -1,0 +1,6 @@
+google-genai
+ollama
+tavily-python
+python-dotenv
+mammoth
+markdownify
